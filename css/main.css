@@ -148,3 +148,15 @@ just for appearance; change whatever you want
 .slide:nth-of-type(5) {
   background: purple;
 }
+
+.autoplay {
+  
+  display: inline-block;
+  padding: auto;
+  width: 30px;
+  height: inherit;
+  cursor: pointer;
+  vertical-align: middle;
+  text-align: center;
+  outline: 1px solid green;
+}

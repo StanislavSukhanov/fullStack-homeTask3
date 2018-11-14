@@ -26,6 +26,17 @@ window.addEventListener('DOMContentLoaded', function() {
     goToSlide(currentSlide - 1);
   }
 
+  function startAutoplay(n){
+    slides[currentSlide].className = "slide";
+    //currentSlide = (currentSlide + 1) % slides.length;
+    setInterval(function(){
+
+      nextSlide();
+      
+    }, 1000);
+
+  }
+
   // -----------события--------------------------------------
 
   next.onclick = function() {
@@ -36,6 +47,11 @@ window.addEventListener('DOMContentLoaded', function() {
 
     previousSlide();
   };
+  //handles start of autoplay: 
+  start.onclick = function(){
+    alert('success');
+    startAutoplay();
+  }
 });
 
 
