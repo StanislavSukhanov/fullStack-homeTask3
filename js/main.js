@@ -26,15 +26,19 @@ window.addEventListener('DOMContentLoaded', function() {
     goToSlide(currentSlide - 1);
   }
 
-  function startAutoplay(n){
-    slides[currentSlide].className = "slide";
-    //currentSlide = (currentSlide + 1) % slides.length;
+  function startAutoplay(){
+    
     setInterval(function(){
-
+      
       nextSlide();
       
     }, 1000);
 
+  }
+
+  function stopAutoplay(){
+    var stop = startAutoplay();
+    clearInterval();
   }
 
   // -----------события--------------------------------------
@@ -49,8 +53,12 @@ window.addEventListener('DOMContentLoaded', function() {
   };
   //handles start of autoplay: 
   start.onclick = function(){
-    alert('success');
+ 
     startAutoplay();
+  }
+
+  stop.onclick = function(){
+    stopAutoplay();
   }
 });
 
