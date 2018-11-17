@@ -4,7 +4,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
   var slides = document.querySelectorAll('#slides .slide');
   var currentSlide = 0;
-
+  //var timerId;
 
   // -----------------------логика-----------------------
 
@@ -26,19 +26,16 @@ window.addEventListener('DOMContentLoaded', function() {
     goToSlide(currentSlide - 1);
   }
 
-  function startAutoplay(){
-    
-    setInterval(function(){
-      
-      nextSlide();
-      
-    }, 1000);
+  // handles start of slider autoplay;
 
+  
+  function startAutoplay(){
+    timerId = setInterval(nextSlide, 1000);
   }
 
-  function stopAutoplay(){
-    var stop = startAutoplay();
-    clearInterval();
+  // handles stop of slider autoplay; 
+  function stopAutoplay() {
+    clearInterval(timerId);
   }
 
   // -----------события--------------------------------------
@@ -51,15 +48,21 @@ window.addEventListener('DOMContentLoaded', function() {
 
     previousSlide();
   };
+
   //handles start of autoplay: 
   start.onclick = function(){
- 
+    
     startAutoplay();
-  }
-
-  stop.onclick = function(){
+    
+  };
+  
+  
+  // does not work
+  stops.onclick = function(){
+    console.log('worked2');
     stopAutoplay();
-  }
+  };
+  
 });
 
 
