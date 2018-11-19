@@ -88,10 +88,12 @@ table {
 essential styles:
 these make the slideshow work
 */
-
+.slider-container {
+  position: relative;
+}
 #slides {
   position: relative;
-  height: 150px;
+  height: 500px;
   padding: 0px;
   margin: 0px;
   list-style-type: none;
@@ -130,27 +132,32 @@ just for appearance; change whatever you want
 }
 
 .slide:nth-of-type(1) {
-  background: red;
+  background-image: url("../img/20.jpg");
+  background-size: cover;
 }
 
 .slide:nth-of-type(2) {
-  background: orange;
+  background-image: url("../img/30.jpg");
+  background-size: cover;
 }
 
 .slide:nth-of-type(3) {
-  background: green;
+  background-image: url("../img/40.jpg");
+  background-size: cover;
 }
 
 .slide:nth-of-type(4) {
-  background: blue;
+  background-image: url("../img/50.jpg");
+  background-size: cover;
 }
 
 .slide:nth-of-type(5) {
-  background: purple;
+  background-image: url("../img/70.jpg");
+  background-size: cover;
 }
 
+/** styling buttons */
 .autoplay {
-  
   display: inline-block;
   padding: auto;
   width: 30px;
@@ -159,4 +166,48 @@ just for appearance; change whatever you want
   vertical-align: middle;
   text-align: center;
   outline: 1px solid green;
+}
+
+.controls {
+  position: absolute;
+  display: inline-block;
+  z-index: 2;
+  text-align: center;
+  height: 100%;
+  width: 15%;
+  cursor: pointer; 
+  transition: background-color .2s ease-out;
+}
+
+.controls:hover {
+  background-color: rgba(100, 98, 98, 0.205);
+}
+
+.next {
+  top: 0;
+  right: 0;
+}
+
+.prev {
+  rotate: -45deg;
+  top: 0;
+  left: 0;
+}
+
+.next img {
+  position: absolute;
+  display: inline-block;
+  width: 20%;
+  right: 40%;
+  top: 45%;
+  transform: rotate(-90deg);
+}
+
+.prev img {
+  position: absolute;
+  display: inline-block;
+  width: 20%;
+  left: 40%;
+  top: 45%;
+  transform: rotate(90deg);
 }

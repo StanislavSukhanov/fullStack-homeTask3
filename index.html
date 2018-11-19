@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Bootstrap</title>
+    <title>Slider</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
@@ -16,15 +16,18 @@
 
         </header>
         <main>
-            
-            <ul id="slides">
-                <li class="slide showing">Slide 1</li>
-                <li class="slide">Slide 2</li>
-                <li class="slide">Slide 3</li>
-                <li class="slide">Slide 4</li>
-                <li class="slide">Slide 5</li>
-            </ul>
-            
+            <div class="slider-container">
+                <ul id="slides">
+                    <li class="slide showing">Slide 1</li>
+                    <li class="slide">Slide 2</li>
+                    <li class="slide">Slide 3</li>
+                    <li class="slide">Slide 4</li>
+                    <li class="slide">Slide 5</li>
+                </ul>
+                <div class="controls prev" id="previous"><img src="img/arrows-svg-down-6 (1).png" alt=""></div> 
+                <div class="controls next" id="next"><img src="img/arrows-svg-down-6 (1).png" alt=""></div>
+            </div>
+
             <!--
             <div class="slider-container">
                 <ul class="slides">
@@ -46,15 +49,19 @@
 
         -->
 
-            
-            
+
+
             <div class="controls-container">
+                <!--
                 <button class="controls" id="previous">Previous</button>
                 <button class="controls" id="next">Next</button>
+                
+
                 <span id="start" class="autoplay start">></span>
                 <span id="stops" class="autoplay stop">||</span>
             </div>
-            
+            -->
+
         </main>
         <footer></footer>
     </div>
