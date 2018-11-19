@@ -5,7 +5,6 @@ window.addEventListener('DOMContentLoaded', function() {
   var slides = document.querySelectorAll('#slides .slide');
   var currentSlide = 0;
 
-
   // -----------------------логика-----------------------
 
 
@@ -27,21 +26,13 @@ window.addEventListener('DOMContentLoaded', function() {
   }
 
   // handles start of slider autoplay;
-
   function startAutoplay(){
-    // checking if timerId exists to avoid running script > once
-    // if(timerId != undefined){
-    //  return;
-    // } else {
-    timerId = setInterval(nextSlide, 1000);
-   //  }
+      timerId = setInterval(nextSlide, 1000);
   }
 
   // handles stop of slider autoplay; 
   function stopAutoplay() {
     clearInterval(timerId);
-    
-    // timerId? console.log("not good"): console.log('hurrah!');
   }
 
 

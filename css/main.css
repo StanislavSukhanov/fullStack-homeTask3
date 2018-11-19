@@ -132,12 +132,12 @@ just for appearance; change whatever you want
 }
 
 .slide:nth-of-type(1) {
-  background-image: url("../img/20.jpg");
+  background-image: url("../img/30.jpg");
   background-size: cover;
 }
 
 .slide:nth-of-type(2) {
-  background-image: url("../img/30.jpg");
+  background-image: url("../img/20.jpg");
   background-size: cover;
 }
 
@@ -211,3 +211,61 @@ just for appearance; change whatever you want
   top: 45%;
   transform: rotate(90deg);
 }
+
+.controls-bottom {
+  position: absolute;
+  width: 12%;
+  height: 10%;
+  bottom: 3%;
+  left: 50%;
+  z-index: 2;
+  transform: translateX(-50%);
+  border-radius: 30px;
+  opacity: .3;
+  background-color: #fff;
+  transition: opacity .2s ease;
+}
+
+.controls-bottom:hover {
+  opacity: .5;
+}
+
+.controls-bottom .stop {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  display: inline-block;
+}
+
+.controls-bottom .play {
+  position: absolute;
+  height: 100%;
+  left: 50%;
+  width: 50%;
+  display: inline-block;
+}
+
+.stop img, .play img  {
+  position: absolute;
+  display: inline-block;
+  height: 90%;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+/*
+.play img {
+  position: absolute;
+  display: inline-block;
+  height: 90%;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  border-radius: 50%;
+}
+*/
+
