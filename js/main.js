@@ -28,6 +28,7 @@ window.addEventListener('DOMContentLoaded', function() {
   // handles start of slider autoplay;
   function startAutoplay(){
       timerId = setInterval(nextSlide, 1000);
+      start.classList.add('disabled');
   }
 
   // handles stop of slider autoplay; 
@@ -58,7 +59,7 @@ window.addEventListener('DOMContentLoaded', function() {
   // does not work
   stops.onclick = function(){
     stopAutoplay();
-
+    start.classList.remove('disabled');
   };
 
   

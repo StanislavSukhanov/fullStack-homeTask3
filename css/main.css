@@ -256,6 +256,9 @@ just for appearance; change whatever you want
   border-radius: 50%;
 }
 
+.disabled {
+  pointer-events: none;
+}
 /*
 .play img {
   position: absolute;
